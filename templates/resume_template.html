@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+    font-family: 'Calibri', 'Arial', sans-serif;
+    margin: 50px;
+    color: #333;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.top-info {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.section {
+    margin-top: 30px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #333;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+.summary {
+    margin-top: 15px;
+    line-height: 1.6;
+    font-style: italic;
+    text-align: justify;
+}
+</style>
+</head>
+
+<body>
+
+<h1>{{name}}</h1>
+
+<div class="top-info">
+{% if location %}{{location}} | {% endif %}
+{% if phone %}{{phone}} | {% endif %}
+{% if email %}{{email}} | {% endif %}
+{% if linkedin %}{{linkedin}}{% endif %}
+</div>
+
+{% if summary %}
+<p class="summary">{{summary}}</p>
+{% else %}
+<p class="summary">A motivated professional with strong skills and achievements seeking to make a valuable contribution.</p>
+{% endif %}
+
+{% if experience %}
+<div class="section">
+<div class="section-title">Work Experience</div>
+<ul>
+{% for e in experience %}
+<li>{{e}}</li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+{% if education %}
+<div class="section">
+<div class="section-title">Education</div>
+<ul>
+{% for e in education %}
+<li>{{e}}</li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+{% if skills %}
+<div class="section">
+<div class="section-title">Skills</div>
+<ul>
+{% for s in skills %}
+<li>{{s}}</li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+{% if languages %}
+<div class="section">
+<div class="section-title">Languages</div>
+<ul>
+{% for l in languages %}
+<li>{{l}}</li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+{% if projects %}
+<div class="section">
+<div class="section-title">Projects</div>
+<ul>
+{% for p in projects %}
+<li>{{p}}</li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+</body>
+</html>

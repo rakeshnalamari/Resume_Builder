@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Professional Resume Builder</title>
+
+<style>
+body{font-family:Arial;background:#f4f6f8;}
+.container{width:700px;margin:auto;background:white;padding:30px;margin-top:40px;border-radius:8px;}
+label{font-weight:bold;display:block;margin-top:12px;}
+input,textarea{width:100%;padding:12px;margin-top:6px;border:1px solid #ccc;border-radius:6px;}
+textarea{height:70px;}
+button{width:100%;padding:14px;margin-top:20px;background:black;color:white;border:none;}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Professional Resume Builder</h2>
+
+<form action="/generate_resume" method="POST">
+
+<label>Full Name</label>
+<input name="name" placeholder="John Doe" required>
+
+<label>Location</label>
+<input name="location" placeholder="Taipei, Taiwan">
+
+<label>Phone</label>
+<input name="phone" placeholder="+886 910 123456">
+
+<label>Email</label>
+<input name="email" placeholder="john@email.com">
+
+<label>LinkedIn</label>
+<input name="linkedin" placeholder="linkedin.com/in/johndoe">
+
+<label>Professional Summary</label>
+<textarea name="summary"
+placeholder="2–3 line professional summary..."></textarea>
+
+<label>Work Experience</label>
+<textarea name="experience"
+placeholder="Job Title - Company - Dates - Key achievement; Software Engineer - ABC Corp - 2022-2024 - Built APIs"></textarea>
+
+<label>Education</label>
+<textarea name="education"
+placeholder="BSc Computer Science - XYZ University - 2018-2022"></textarea>
+
+<label>Skills</label>
+<textarea name="skills"
+placeholder="Python, SQL, Project Management"></textarea>
+
+<label>Languages</label>
+<textarea name="languages"
+placeholder="English, Chinese"></textarea>
+
+<label>Projects (Optional)</label>
+<textarea name="projects"
+placeholder="Project Name - Details; Another Project - Details"></textarea>
+
+<button type="submit">Generate Resume</button>
+
+</form>
+</div>
+
+</body>
+</html>
